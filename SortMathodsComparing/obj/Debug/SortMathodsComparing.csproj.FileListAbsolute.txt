@@ -1,0 +1,9 @@
+C:\Users\user\source\repos\SortMathodsComparing\SortMathodsComparing\bin\Debug\SortMathodsComparing.exe.config
+C:\Users\user\source\repos\SortMathodsComparing\SortMathodsComparing\bin\Debug\SortMathodsComparing.exe
+C:\Users\user\source\repos\SortMathodsComparing\SortMathodsComparing\bin\Debug\SortMathodsComparing.pdb
+C:\Users\user\source\repos\SortMathodsComparing\SortMathodsComparing\obj\Debug\SortMathodsComparing.csprojAssemblyReference.cache
+C:\Users\user\source\repos\SortMathodsComparing\SortMathodsComparing\obj\Debug\SortMathodsComparing.Form1.resources
+C:\Users\user\source\repos\SortMathodsComparing\SortMathodsComparing\obj\Debug\SortMathodsComparing.Properties.Resources.resources
+C:\Users\user\source\repos\SortMathodsComparing\SortMathodsComparing\obj\Debug\SortMathodsComparing.csproj.GenerateResource.cache
+C:\Users\user\source\repos\SortMathodsComparing\SortMathodsComparing\obj\Debug\SortMathodsComparing.exe
+C:\Users\user\source\repos\SortMathodsComparing\SortMathodsComparing\obj\Debug\SortMathodsComparing.pdb
