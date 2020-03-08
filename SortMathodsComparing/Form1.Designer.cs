@@ -31,36 +31,37 @@
             this.sortBtn = new System.Windows.Forms.Button();
             this.amountNUD = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.sortTypeComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ecendingRadioBtn = new System.Windows.Forms.RadioButton();
+            this.decendingRadioBtn = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textRadioBtn = new System.Windows.Forms.RadioButton();
+            this.arrayRadioBtn = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.clearBtn = new System.Windows.Forms.Button();
-            this.infoTB = new System.Windows.Forms.TextBox();
-            this.decendingRadioBtn = new System.Windows.Forms.RadioButton();
-            this.ecendingRadioBtn = new System.Windows.Forms.RadioButton();
-            this.arrayRadioBtn = new System.Windows.Forms.RadioButton();
-            this.textRadioBtn = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lengthNUD = new System.Windows.Forms.NumericUpDown();
-            this.sortTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.dataTB = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.sortedDataTB = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataTB = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.digitsNUD = new System.Windows.Forms.NumericUpDown();
+            this.infoTB = new System.Windows.Forms.TextBox();
+            this.clearBtn = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.amountNUD)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lengthNUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.digitsNUD)).BeginInit();
             this.SuspendLayout();
             // 
             // sortBtn
             // 
+            this.sortBtn.Enabled = false;
             this.sortBtn.Location = new System.Drawing.Point(24, 522);
             this.sortBtn.Name = "sortBtn";
             this.sortBtn.Size = new System.Drawing.Size(101, 40);
@@ -106,6 +107,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Тип сортування";
             // 
+            // sortTypeComboBox
+            // 
+            this.sortTypeComboBox.FormattingEnabled = true;
+            this.sortTypeComboBox.Items.AddRange(new object[] {
+            "Бульбашкою",
+            "Вибіркою",
+            "Швидке сортування",
+            "Включенням",
+            "Методом Шелла"});
+            this.sortTypeComboBox.Location = new System.Drawing.Point(21, 29);
+            this.sortTypeComboBox.Name = "sortTypeComboBox";
+            this.sortTypeComboBox.Size = new System.Drawing.Size(158, 24);
+            this.sortTypeComboBox.TabIndex = 11;
+            this.sortTypeComboBox.Text = "-----Виберіть-----";
+            this.sortTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.sortTypeComboBox_SelectedIndexChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -126,6 +143,28 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Як сортувати";
             // 
+            // ecendingRadioBtn
+            // 
+            this.ecendingRadioBtn.AutoSize = true;
+            this.ecendingRadioBtn.Location = new System.Drawing.Point(21, 50);
+            this.ecendingRadioBtn.Name = "ecendingRadioBtn";
+            this.ecendingRadioBtn.Size = new System.Drawing.Size(122, 21);
+            this.ecendingRadioBtn.TabIndex = 1;
+            this.ecendingRadioBtn.Text = "За спаданням";
+            this.ecendingRadioBtn.UseVisualStyleBackColor = true;
+            // 
+            // decendingRadioBtn
+            // 
+            this.decendingRadioBtn.AutoSize = true;
+            this.decendingRadioBtn.Checked = true;
+            this.decendingRadioBtn.Location = new System.Drawing.Point(21, 24);
+            this.decendingRadioBtn.Name = "decendingRadioBtn";
+            this.decendingRadioBtn.Size = new System.Drawing.Size(128, 21);
+            this.decendingRadioBtn.TabIndex = 0;
+            this.decendingRadioBtn.TabStop = true;
+            this.decendingRadioBtn.Text = "За зростанням";
+            this.decendingRadioBtn.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textRadioBtn);
@@ -136,6 +175,29 @@
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Тип даних";
+            // 
+            // textRadioBtn
+            // 
+            this.textRadioBtn.AutoSize = true;
+            this.textRadioBtn.Location = new System.Drawing.Point(21, 50);
+            this.textRadioBtn.Name = "textRadioBtn";
+            this.textRadioBtn.Size = new System.Drawing.Size(122, 21);
+            this.textRadioBtn.TabIndex = 3;
+            this.textRadioBtn.Text = "Масив записів";
+            this.textRadioBtn.UseVisualStyleBackColor = true;
+            // 
+            // arrayRadioBtn
+            // 
+            this.arrayRadioBtn.AutoSize = true;
+            this.arrayRadioBtn.Checked = true;
+            this.arrayRadioBtn.Location = new System.Drawing.Point(21, 23);
+            this.arrayRadioBtn.Name = "arrayRadioBtn";
+            this.arrayRadioBtn.Size = new System.Drawing.Size(113, 21);
+            this.arrayRadioBtn.TabIndex = 2;
+            this.arrayRadioBtn.TabStop = true;
+            this.arrayRadioBtn.Text = "Масив чисел";
+            this.arrayRadioBtn.UseVisualStyleBackColor = true;
+            this.arrayRadioBtn.CheckedChanged += new System.EventHandler(this.arrayRadioBtn_CheckedChanged);
             // 
             // tabControl1
             // 
@@ -154,7 +216,7 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.dataTB);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.lengthNUD);
+            this.tabPage1.Controls.Add(this.digitsNUD);
             this.tabPage1.Controls.Add(this.infoTB);
             this.tabPage1.Controls.Add(this.clearBtn);
             this.tabPage1.Controls.Add(this.label1);
@@ -170,140 +232,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Сортування";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(854, 584);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Характеристики сортування";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // clearBtn
-            // 
-            this.clearBtn.Location = new System.Drawing.Point(131, 522);
-            this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(93, 40);
-            this.clearBtn.TabIndex = 7;
-            this.clearBtn.Text = "Очистити";
-            this.clearBtn.UseVisualStyleBackColor = true;
-            // 
-            // infoTB
-            // 
-            this.infoTB.Location = new System.Drawing.Point(24, 410);
-            this.infoTB.Multiline = true;
-            this.infoTB.Name = "infoTB";
-            this.infoTB.ReadOnly = true;
-            this.infoTB.Size = new System.Drawing.Size(200, 87);
-            this.infoTB.TabIndex = 8;
-            // 
-            // decendingRadioBtn
-            // 
-            this.decendingRadioBtn.AutoSize = true;
-            this.decendingRadioBtn.Checked = true;
-            this.decendingRadioBtn.Location = new System.Drawing.Point(21, 24);
-            this.decendingRadioBtn.Name = "decendingRadioBtn";
-            this.decendingRadioBtn.Size = new System.Drawing.Size(128, 21);
-            this.decendingRadioBtn.TabIndex = 0;
-            this.decendingRadioBtn.TabStop = true;
-            this.decendingRadioBtn.Text = "За зростанням";
-            this.decendingRadioBtn.UseVisualStyleBackColor = true;
-            // 
-            // ecendingRadioBtn
-            // 
-            this.ecendingRadioBtn.AutoSize = true;
-            this.ecendingRadioBtn.Location = new System.Drawing.Point(21, 50);
-            this.ecendingRadioBtn.Name = "ecendingRadioBtn";
-            this.ecendingRadioBtn.Size = new System.Drawing.Size(122, 21);
-            this.ecendingRadioBtn.TabIndex = 1;
-            this.ecendingRadioBtn.Text = "За спаданням";
-            this.ecendingRadioBtn.UseVisualStyleBackColor = true;
-            // 
-            // arrayRadioBtn
-            // 
-            this.arrayRadioBtn.AutoSize = true;
-            this.arrayRadioBtn.Checked = true;
-            this.arrayRadioBtn.Location = new System.Drawing.Point(21, 23);
-            this.arrayRadioBtn.Name = "arrayRadioBtn";
-            this.arrayRadioBtn.Size = new System.Drawing.Size(113, 21);
-            this.arrayRadioBtn.TabIndex = 2;
-            this.arrayRadioBtn.Text = "Масив чисел";
-            this.arrayRadioBtn.UseVisualStyleBackColor = true;
-            // 
-            // textRadioBtn
-            // 
-            this.textRadioBtn.AutoSize = true;
-            this.textRadioBtn.Location = new System.Drawing.Point(21, 50);
-            this.textRadioBtn.Name = "textRadioBtn";
-            this.textRadioBtn.Size = new System.Drawing.Size(122, 21);
-            this.textRadioBtn.TabIndex = 3;
-            this.textRadioBtn.Text = "Масив записів";
-            this.textRadioBtn.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 366);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 17);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Розрядність";
-            // 
-            // lengthNUD
-            // 
-            this.lengthNUD.Location = new System.Drawing.Point(140, 364);
-            this.lengthNUD.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.lengthNUD.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.lengthNUD.Name = "lengthNUD";
-            this.lengthNUD.Size = new System.Drawing.Size(84, 22);
-            this.lengthNUD.TabIndex = 9;
-            this.lengthNUD.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // sortTypeComboBox
-            // 
-            this.sortTypeComboBox.FormattingEnabled = true;
-            this.sortTypeComboBox.Items.AddRange(new object[] {
-            "Бульбашкою",
-            "Вибіркою",
-            "Швидке сортування",
-            "Методом Шелла"});
-            this.sortTypeComboBox.Location = new System.Drawing.Point(21, 29);
-            this.sortTypeComboBox.Name = "sortTypeComboBox";
-            this.sortTypeComboBox.Size = new System.Drawing.Size(158, 24);
-            this.sortTypeComboBox.TabIndex = 11;
-            this.sortTypeComboBox.Text = "-----Виберіть-----";
-            // 
-            // dataTB
-            // 
-            this.dataTB.Location = new System.Drawing.Point(325, 38);
-            this.dataTB.Multiline = true;
-            this.dataTB.Name = "dataTB";
-            this.dataTB.ReadOnly = true;
-            this.dataTB.Size = new System.Drawing.Size(507, 243);
-            this.dataTB.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(322, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 17);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Вхідні дані";
             // 
             // label4
             // 
@@ -323,6 +251,84 @@
             this.sortedDataTB.Size = new System.Drawing.Size(507, 243);
             this.sortedDataTB.TabIndex = 13;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(322, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 17);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Вхідні дані";
+            // 
+            // dataTB
+            // 
+            this.dataTB.Location = new System.Drawing.Point(325, 38);
+            this.dataTB.Multiline = true;
+            this.dataTB.Name = "dataTB";
+            this.dataTB.ReadOnly = true;
+            this.dataTB.Size = new System.Drawing.Size(507, 243);
+            this.dataTB.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 366);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Розрядність";
+            // 
+            // digitsNUD
+            // 
+            this.digitsNUD.Location = new System.Drawing.Point(140, 364);
+            this.digitsNUD.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.digitsNUD.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.digitsNUD.Name = "digitsNUD";
+            this.digitsNUD.Size = new System.Drawing.Size(84, 22);
+            this.digitsNUD.TabIndex = 9;
+            this.digitsNUD.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // infoTB
+            // 
+            this.infoTB.Location = new System.Drawing.Point(24, 410);
+            this.infoTB.Multiline = true;
+            this.infoTB.Name = "infoTB";
+            this.infoTB.ReadOnly = true;
+            this.infoTB.Size = new System.Drawing.Size(200, 87);
+            this.infoTB.TabIndex = 8;
+            // 
+            // clearBtn
+            // 
+            this.clearBtn.Location = new System.Drawing.Point(131, 522);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(93, 40);
+            this.clearBtn.TabIndex = 7;
+            this.clearBtn.Text = "Очистити";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(854, 584);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Характеристики сортування";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -341,7 +347,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lengthNUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.digitsNUD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -365,7 +371,7 @@
         private System.Windows.Forms.RadioButton arrayRadioBtn;
         private System.Windows.Forms.ComboBox sortTypeComboBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown lengthNUD;
+        private System.Windows.Forms.NumericUpDown digitsNUD;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox sortedDataTB;
         private System.Windows.Forms.Label label3;

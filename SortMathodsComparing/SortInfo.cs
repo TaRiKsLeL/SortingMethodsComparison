@@ -6,13 +6,21 @@ using System.Threading.Tasks;
 
 namespace SortMathodsComparing
 {
-    class SortInfo
+    public class SortInfo
     {
         public SortType SortType { get; set; }
         public DataType DataType { get; set; }
-        public int ElementsAmount { get; set; }
-        public int ComparisonAmount { get; set; }
-        public int SwapsAmount { get; set; }
+        public double Time { get; set; }
+        public uint ElementsAmount { get; set; }
+        public uint ComparisonAmount { get; set; }
+        public uint SwapsAmount { get; set; }
+
+        public override string ToString()
+        {
+            return "Sort Type: " + SortType.ToString() + "\n  Data Type: " + DataType.ToString() + 
+                "\n  Time: " + Time + "\n  Elements Amount: " + ElementsAmount +
+                "\n  Comparison Amount: " + ComparisonAmount + "\n  Swaps Amount: " + SwapsAmount;
+        }
 
     }
 
@@ -20,7 +28,8 @@ namespace SortMathodsComparing
     {
         BUBBLE,
         SHELL,
-        QUICK
+        QUICK,
+        INSERTION
     }
 
     public enum DataType
