@@ -17,14 +17,23 @@ namespace SortMathodsComparing.Sorts
         {
             SetupTimer();
 
+            //1. For each value in the array...
             for (int i = 1; i < array.Length; ++i)
             {
-                int j = i - 1;
-                while (j >= 0 && (array[i].CompareTo(array[j]) > 0))
+                //2. Store the current value in a variable.
+                T currentValue = array[i];
+                int pointer = i - 1;
+
+                //3. While we are pointing to a valid value...
+                //4. If the current value is less than the value we are pointing at...
+                while (pointer >= 0 && (array[pointer].CompareTo(currentValue)>0))
                 {
-                    Foo.Swap<T>(ref array[j + 1], ref array[j]);
-                    --j;
+                    //5. Then move the pointed-at value up one space, and store the
+                    //   current value at the pointed-at position.
+                    array[pointer + 1] = array[pointer];
+                    pointer = pointer - 1;
                 }
+                array[pointer + 1] = currentValue;
             }
 
             stopwatch.Stop();

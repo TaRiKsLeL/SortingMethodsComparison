@@ -38,16 +38,16 @@ namespace SortMathodsComparing
             {
                 case DataType.INT_ARRAY:
                     intArray = ArrayGenerator.GenerateIntArray(Convert.ToInt32(amountNUD.Value), Convert.ToInt32(digitsNUD.Value));
-                   // ShowArrayInTextBox<int>(dataTB, intArray);
+                    ShowArrayInTextBox<int>(dataTB, intArray);
                     sorter.Sort(intArray);
-                   // ShowArrayInTextBox<int>(sortedDataTB, intArray);
+                    ShowArrayInTextBox<int>(sortedDataTB, intArray);
 
                     break;
                 case DataType.STRING_ARRAY:
                     stringArray = ArrayGenerator.GenerateStringArray(Convert.ToInt32(amountNUD.Value), Convert.ToInt32(digitsNUD.Value));
-                    //ShowArrayInTextBox<string>(dataTB, stringArray);
+                    ShowArrayInTextBox<string>(dataTB, stringArray);
                     sorter.Sort(stringArray);
-                    //ShowArrayInTextBox<string>(sortedDataTB, stringArray);
+                    ShowArrayInTextBox<string>(sortedDataTB, stringArray);
                     break;
             }
 
@@ -82,6 +82,10 @@ namespace SortMathodsComparing
             {
                 sorter = new Bubble();
 
+            }
+            else if (sortTypeComboBox.SelectedItem.ToString().Equals("Вибіркою"))
+            {
+                sorter = new Selection();
             }
             else if (sortTypeComboBox.SelectedItem.ToString().Equals("Включенням"))
             {

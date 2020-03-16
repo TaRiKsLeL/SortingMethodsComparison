@@ -18,8 +18,7 @@ namespace SortMathodsComparing
         public override string ToString()
         {
             return "Sort Type: " + SortType.ToString() + "\n  Data Type: " + DataType.ToString() + 
-                "\n  Time: " + Time + "\n  Elements Amount: " + ElementsAmount +
-                "\n  Comparison Amount: " + ComparisonAmount + "\n  Swaps Amount: " + SwapsAmount;
+                "\n  Time: " + Time + "\n  Elements Amount: " + ElementsAmount;
         }
 
     }
@@ -29,7 +28,8 @@ namespace SortMathodsComparing
         BUBBLE,
         SHELL,
         QUICK,
-        INSERTION
+        INSERTION,
+        SELECTION
     }
 
     public enum DataType
